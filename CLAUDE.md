@@ -45,7 +45,7 @@ Navigation uses relative paths (`page.goto('/')`) resolved against `baseURL`.
 - Only the `chromium` project is defined, with a 1920x1080 viewport.
 - `screenshot: 'on'` captures a screenshot for every test; video and trace are kept only on failure. Artifacts land in `test-results/`, the report in `playwright-report/` (both gitignored).
 - Retries are 2 on CI (`process.env.CI`), 0 locally. `fullyParallel` is on.
-- CI (`.github/workflows/playwright.yml`) runs `npx playwright test` on push/PR to `main`/`master` and uploads `playwright-report/`.
+- CI (`.github/workflows/playwright.yml`) runs `npx playwright test` on push/PR to `main`/`master` and uploads `playwright-report/`. On push to `main`, the `deploy-report` job publishes the report to GitHub Pages (https://alexkomanov.github.io/misrad-briut-demo-playwright/, publicly visible). Merges to `main` require the `test` check to pass (repo ruleset), so don't rename that job.
 
 ## Playwright test agents
 
