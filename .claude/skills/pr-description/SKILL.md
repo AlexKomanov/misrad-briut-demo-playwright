@@ -10,8 +10,12 @@ description: Write the title and body of a pull request
    stop and suggest how to split them.
 2. Run `npx playwright test`. Do not open the PR
    while tests fail.
-3. Write the body with these sections:
+3. Do not commit test plans. Plan files under `specs/`
+   (e.g. `specs/plan-1.md`) stay local and are gitignored;
+   only `specs/README.md` is tracked.
+4. Write the body with these sections:
    - **What**: what was added or changed
-   - **Why**: link to the plan under `specs/`
+   - **Why**: the reason for the change; summarize the
+     plan in the body instead of linking a plan file
    - **Agents**: what was generated, what the healer changed,
      and every `test.fixme` with its reason
