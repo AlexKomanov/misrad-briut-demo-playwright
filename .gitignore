@@ -9,3 +9,7 @@ node_modules/
 
 # Environment
 .env
+
+# Test plans stay local (see .claude/skills/pr-description)
+specs/*.md
+!specs/README.md

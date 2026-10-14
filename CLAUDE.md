@@ -52,7 +52,7 @@ Navigation uses relative paths (`page.goto('/')`) resolved against `baseURL`.
 The repo is set up for Playwright's planner/generator/healer agent workflow:
 
 - `.mcp.json` registers the `playwright-test` MCP server (`npx playwright run-test-mcp-server`), which the agents in `.claude/agents/` depend on.
-- `playwright-test-planner` explores the site and writes test plans into `specs/`.
+- `playwright-test-planner` explores the site and writes test plans into `specs/`. Plans are gitignored and never committed (only `specs/README.md` is tracked).
 - `playwright-test-generator` turns a plan item into a spec file, using `tests/seed.spec.ts` as the seed (it shows the fixture import and the starting navigation).
 - `playwright-test-healer` runs and repairs failing tests.
 

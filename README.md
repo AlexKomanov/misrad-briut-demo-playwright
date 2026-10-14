@@ -42,7 +42,7 @@ Screenshots are captured for every test; video and trace are kept on failure. Re
 pages/        Page objects, one class per page (locators + actions)
 fixtures/     Extends Playwright's test with a fixture per page object
 tests/        Specs; import test/expect from fixtures/fixtures
-specs/        Test plans used by the Playwright test agents
+specs/        Test plans used by the Playwright test agents (local only, gitignored)
 utils/env.ts  Loads and validates environment variables
 ```
 
