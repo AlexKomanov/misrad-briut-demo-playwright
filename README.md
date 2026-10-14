@@ -51,3 +51,5 @@ Elements are located by the site's `data-test` attribute via `page.getByTestId()
 ## CI
 
 GitHub Actions (`.github/workflows/playwright.yml`) runs the suite on push and pull request to `main`, and uploads the HTML report as an artifact. It reads the `BASE_URL` repository variable and the `STANDARD_USER`, `LOCKED_OUT_USER` and `PASSWORD` repository secrets.
+
+On every push to `main` the report is also published to GitHub Pages: https://alexkomanov.github.io/misrad-briut-demo-playwright/
